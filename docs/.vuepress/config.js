@@ -138,7 +138,9 @@ const sidebar = {
     {
       collapsable: false,
       title: 'General settings',
-      children: [['/user-docs/latest/settings/managing-global-settings', 'Managing global settings']],
+      children: [
+        ['/user-docs/latest/settings/managing-global-settings', 'Managing global settings'],
+      ],
     },
   ],
 };
@@ -169,10 +171,13 @@ module.exports = {
   base: '/documentation/',
   plugins: {
     '@vuepress/medium-zoom': {},
-    'vuepress-plugin-element-tabs': {},
+    '@vuepress/active-header-links': {},
+    '@vuepress/back-to-top': {},
     '@vuepress/google-analytics': {
       ga: 'UA-54313258-1',
     },
+    'vuepress-plugin-smooth-scroll': {},
+    'vuepress-plugin-element-tabs': {},
     'check-md': {
       ignore: checklinksIgnoredFiles,
     },
@@ -333,8 +338,8 @@ module.exports = {
               },
               {
                 text: 'General Settings',
-                link: '/user-docs/latest/settings/managing-global-settings.html'
-              }
+                link: '/user-docs/latest/settings/managing-global-settings.html',
+              },
             ],
           },
         ],
