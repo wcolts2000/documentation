@@ -1,0 +1,3 @@
+{
+  "redirects": [{ "source": "/documentation", "destination": "/", "permanent": false }]
+}
